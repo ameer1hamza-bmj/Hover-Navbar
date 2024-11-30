@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html{
+    font-size: 62.5%;
+    background-color: #333;
+}
+.container{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    background-color: #EDB903;
+}
+.logo{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    justify-content: flex-end;
+}
+.logo img{
+width: 12rem;
+
+}
+.navbar{
+    height: 100%;
+    width:85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.navbar ul{
+    display: flex;
+margin: 15px;
+}
+.navbar ul li{
+    padding: 50px;
+   list-style: none;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    background: linear-gradient(to right, red, blue);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    border-bottom: 2px solid #EDB903;
+    transition: 1s all linear;
+}
+.navbar ul li a:hover{
+    border-bottom: 2px solid red;
+
+}
+.iconbar{
+    height: 100%;
+    width: 15%;
+   display: none;
+   /* display: flex ; */
+  
+}
+.container2{
+    height: 400px;
+    width: 100%;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #EDB903;
+}
+
+
+
+
+@media (max-width:799px) {
+    .logo{
+        height: 100%;
+        width: 50%;
+    justify-content: flex-start;
+    padding-left: 15px;
+    }
+    .navbar{
+     display: none;
+    }
+    .iconbar{
+        height: 100%;
+        width: 50%;
+       
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 50px;
+    }
+    .iconbar i{
+        font-size: 3.5rem;
+        cursor: pointer;
+        background: linear-gradient(to right, red, blue);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+    .container:hover + .container2{
+        display: flex;
+    }
+    .container2{
+        height: 400px;
+        width: 100%;
+        display: none;
+        align-items: flex-start;
+        justify-content: center;
+        
+        transform: translateX(-1000px);
+        animation: To-right 2s forwards;
+    }
+    .container2 ul{
+        /* display: flex; */
+    margin: 15px;
+    }
+    .container2 ul li{
+        padding: 20px;
+       list-style: none;
+    }
+    .container2 ul li a{
+        text-decoration: none;
+        color: black;
+        font-size: 2rem;
+        background: linear-gradient(to right, red, blue);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        border-bottom: 2px solid #EDB903;
+        transition: 1s all linear;
+    }
+    .container2 ul li a:hover{
+        border-bottom: 2px solid red;
+    
+    }
+}
+@keyframes To-right {
+ from{
+    transform: translateX(-1000px);
+    
+ }  
+ to{
+transform: translateX(0px);
+ }
+  
+}
